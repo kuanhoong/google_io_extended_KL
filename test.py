@@ -2,7 +2,7 @@ import tensorflow as tf
 import os, sys
 from PIL import Image
 
-image_path = 'test_images/leopard2.jpg'
+image_path = 'test_images/cat02.jpg'
 
 size = (299, 299)
 
@@ -16,12 +16,12 @@ try:
     ## By default, black colour would be used as the background for padding!
     new_im = Image.new("RGB", size)
 
-    new_im.paste(im, ((size[0]-old_im_size[0])/2,
-	              (size[1]-old_im_size[1])/2))
+    new_im.paste(im, (int((size[0]-old_im_size[0])/2),
+	              int((size[1]-old_im_size[1])/2)))
     
     new_im.save(outfile, "JPEG")
 except IOError:
-    print "Cannot resize '%s'" % infile
+    print ("Cannot resize '%s'" % infile)
 
 
 
