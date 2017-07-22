@@ -2,7 +2,10 @@ import tensorflow as tf
 import os, sys
 from PIL import Image
 
-image_path = 'test_images/cat02.jpg'
+image_path = 'test_images/cat01.jpg'
+#image_path = 'test_images/cat02.jpg'
+#image_path = 'test_images/dog01.jpg'
+#image_path = 'test_images/dog02.jpg'
 
 size = (299, 299)
 
